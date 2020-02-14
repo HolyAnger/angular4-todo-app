@@ -1,0 +1,19 @@
+<app-add-todo-item (onAddItem)="addItem($event)"></app-add-todo-item>
+<ul class="list-group mb-3">
+  <li
+    class="list-group-item d-flex justify-content-between align-items-center mb-1"
+    [class.bg-success]="todoItem.done" *ngFor="let todoItem of todoItems | searchFilter: searchValue: 'name'"
+    (click)="toggleItem(todoItem)">
+    <input type="text" [value]="todoItem.name" class="todo-title" #todoItemName [disabled]="!todoItem.isEdit"
+           (focusout)="applyEdit(todoItem, todoItemName)" (keyup.enter)="applyEdit(todoItem, todoItemName)"/>
+    <div class="actions">
+      <button class="btn btn-primary btn-md mr-1" (click)="setEditItem(todoItem, todoItemName)"
+              appClickStopPropagation [disabled]="todoItem.done" title="Can edit only if item are not Done">Edit</button>
+      <button class="btn btn-danger btn-md" (click)="removeItem(todoItem.id)" appClickStopPropagation>Delete</button>
+    </div>
+  </li>
+</ul>
+
+<h2 *ngIf="!todoItems?.length" class="text-center">Data is empty!</h2>
+
+<app-search-todo-item (onSearch)="changeSearchValue($event)"></app-search-todo-item>

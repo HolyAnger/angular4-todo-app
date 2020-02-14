@@ -1,0 +1,21 @@
+.list-group-item {
+  cursor: pointer;
+}
+
+.list-group-item.bg-success {
+  color: #fff;
+}
+
+.list-group-item.bg-success .todo-title {
+  text-decoration: line-through;
+}
+
+.todo-title {
+  border: 0;
+  background: transparent;
+  outline: none;
+}
+
+.btn[disabled] {
+  cursor: default;
+}

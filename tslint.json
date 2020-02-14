@@ -87,6 +87,7 @@
     "radix": true,
     "semicolon": [
       true,
+      "ignore-interfaces",
       "always"
     ],
     "triple-equals": [
