@@ -13,8 +13,16 @@ export class TodoListService {
 
   todoItems: TodoItem[] = TodoItems;
 
-  getTodoItems(): Promise <TodoItem[]> {
+  getTodoItems(): Promise<TodoItem[]> {
     return Promise.resolve(this.todoItems);
+  }
+
+  addTodoItem(name: string) {
+    this.todoItems.push({
+      ...this.getDefaultDataItem(),
+      name,
+      id: this.todoItems.length
+    });
   }
 
   getDefaultDataItem(): TodoItem {

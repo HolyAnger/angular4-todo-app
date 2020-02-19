@@ -12,5 +12,4 @@ export class SearchFilterPipe implements PipeTransform {
 
     return arraySearch.filter((arrayItem) => arrayItem[byKey].toLowerCase().indexOf(searchValue.toLowerCase()) !== -1);
   }
-
 }

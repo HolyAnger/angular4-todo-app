@@ -21,7 +21,7 @@ import { SearchFilterPipe } from './pipes/search-filter.pipe';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [TodoListService],
   bootstrap: [AppComponent]

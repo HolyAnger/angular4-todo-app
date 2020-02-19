@@ -1,5 +1,5 @@
 # TodoListAngular4
-
+Use first `npm install` to install node modules.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.2.
 
 ## Development server
