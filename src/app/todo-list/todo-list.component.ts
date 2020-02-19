@@ -19,7 +19,7 @@ export class TodoListComponent implements OnInit {
   }
 
   addItem(name) {
-    this.todoItems.push({...this.todoListService.getDefaultDataItem(), name, id: this.todoItems.length + name});
+    this.todoListService.addTodoItem(name);
   }
 
   changeSearchValue(searchValue) {
